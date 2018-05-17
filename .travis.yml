@@ -13,26 +13,19 @@ env:
   global:
   - COMMIT=${TRAVIS_COMMIT::7}
   - DOCKERHUB='ziwei000'
-  # to cut out the name of repository
-  - IMAGE=`echo ${TRAVIS_REPO_SLUG#*/}`  
-  # DOCKER_USER
-  # DOCKER_PASS
-  - secure: GU5aPmR6j2pGpY6Z9irFUWzc3YmmxSpzM1hanWAYgB8BZFFXwgC9NBGl58V5OOiBK6g0qTkJ7Fhm7xsh9fjGu2mVHHpFcw6Dic3TzIGBZ69KBHB6T4P5QqGIeKgZps3hHMQiq0kWbwJG+TSD3BrFEtxoH7VGnXb8a5s2wrX0SGy+w+gAA0TmUvlzO/QQqzC5+whi6vxyVGKGetih3vVGP/Hovkq5K00nVW+zL3tAnMj8WsLVlXpWd6ROS5bTbw9KhjvROOAxZOiY9yr9HjV98q46KS8ZMjAdPW0c1byNnPfvqY+6QdyZ6pp44IGnLlQ88qFUl7Iobvec/cZ5gtDxG/mQHJh4FqEsXwnL8vivUbVC3O4oGWU7887whMgFIUuLPXLy8YbS3Zn8ZzxTO/v9gEl3ynmtFyGwD3NLedAcaYVOQLvpdkm41viQfkvdMmrK/i5u4oLOedLJxBxaV3gkWc//lu57jCY1Ot5JJi/3sajC3odrPNWlxeggPPT6baEtFQe2hTB5MDIZIGwLPj+Z+6U6QGc4528eDjWBTzF64RvYJni/qmxxxbHlXEa65zUwSQKzS7c7VASYQpOrMtWn1nGophN6I9nzQArdBUjLTYMGdXCfCseCwVrIzLNnj5I0iozo80dIxROeCIMDHPRFsMcaxikd4sinzBtMEsPtcpA=
-  - secure: x1AypIAku76rthaqSsMtWskEyp5i97pj1pDbXTIpA/uxU1e/Ine8PIpxqS2fqfIAQ8WAqZzPA7mp2aG1Wm8rPccyWGUQTKeSvICTJ/HgtTJ1J9DLqMbWR3HaLKb7mJl1R2NKU01GTNTThC4JXcDNcPhpgYBqnPJrjTNqubNZjtP3nfgzDzSi1dxuNt1y0+DKrarX7lK2+bLeMp58SON7iFOYik2fQrhOhbe6LmJJQMS5vlwH7yxq412HObdvfWOP+ajmoRCkBIlDcYGNV7IuuLc09d3j8aJ59mbvq88JLz302zORFyfepD3DsRukgmDaQKmeUhVykW0yE3r3755NBRCrU5BRVZZS1IT4xolvlxNNfqjRQFF9xGVfQyqwwDHG8NnpqeOvzS6r7vtONZsnessnstcbghFfKqODE4aZWQlivr3098hAhDhn3Gso2aUPR94ypooKRXzMY/CovfO4tsvv6a1Uf1RtnEvJ73l6+qPM8U/X2OFqbs3TFNRrCF9qbMyhotBtT7E5r67y5NriDqEW51vq7DiEF5i9KcZ7zg9rugZSSlTqdq2EXr9MqwSzndPaYVGvp1aGQNuT0XneT0L1dyuGV4k3Cc5S6uFzub5i0kXEFiugtK0r/mQHt7e6ZMbbM7Ut2Vp0a7LlRRt1QHsKSnLTWLXh3oE26nRcUPA=
+  - IMAGE=`echo ${TRAVIS_REPO_SLUG#*/}`
+  - secure: p7dk5TI8liqVX4DvcbZiHwA/wF2XnTSyje7osXK3qDFJct8CPQINC3+wcoTFHyAOH3R45UJPPk3t2weEnrn0uLQKg2mEsl6wdrusvOH8z2lLmdcR/RobgT1Guqazc7/Wmj4vyNwj/l39bpqzU2oIn8ivOuT+SXizOdVDSfjjvQvNjyWtOSGPgB/8EcHPbgAG7H0fNNoc4WlKBbseaj6wVMJW2tffHhAIveK+mdIKOfMou9gOtYnEhAOrLVLw9dvsIL7FYpr8pKiL/lWQnu4YlUOBE5WbPa5gIZO4ZLuXszXGwlVt4W/fYzXo4Iy16XMQ5qGnjwhhrSUAYXn9uL/kJ7HgnwchGrvTFEVtxkRRSWYed33Zvl9Qe5cpzUeLxvrTlDp/ZdfCg4eRCXPQ6HuLg/vgraGy4KzHVNGLVgetckY3zn+2fg87EX5AgKn3C9bMBLzRM9yHpvKa2ZMAp5vmoJn7Cwt1KQ0d2I9K91lj+8Waz+Y9ferrOHjXjsTE0/NaSFkEJnjYM2HG+vI3AOQ9NFjoIp67TO34R8uZu6OC/7yPDKqrOnk8cs++LCunScfEJvKmj77cOYr69hpegNIvPRpIazWTVHZQ55KEpFKyCmPXNP1H3e5W/qpOAwlUd0Q+jLsw3iVRGErr5oujpCkxqEDIAFBVKNJFyHD7qG4FCV8=
+  - secure: jmKvjZn+xp6PmKgS8XJs+9GsSfIlXEnRKsyKhIeKcgKnzXnajNZGoR0bkQdi4yVj9oyvIzEBIiDLzZfga/xv/2Qh1ZwOtxDDMMJyF8bBQB6iGRNJuBp7NcN0v0OORQygR01gYB6PlUVmH0wUtSVWO0b1DMe8rhGdoUQrSwGjpCK7fdd09QgtJsZ5io3gEyZaO8PcEpAwI8gxykjYZnAha7L2bedLyx32e5phh732+m3kM0zASOcmMd8vj4PauBqTGDcS410Rro5L8BlcqptyafwX/v0Qo5mfNZPmUEe2Y3VwrpWToYWo60HYE6h8y2L6nFiq37fDMFNec+0P0ouCXedBt46P1FYYl2cV6MfiID2Py5UFuGQ5dcxFu+BJHKkL6uwx0ClOqP65FgHt59Zbu8KRFRrEPiEdXy5J1My8/bKAOchcPGsbONHhmYIjGvnmrqvMDazBzzJUtnke/MWpF5CP2oxzPSGW2G0nGXSYh9JZ35o4wQ4etw6nk3hV8svgJqVIf49u2EtF9zgMt+P2ZvUaVIgja+R7pL7oHLqP0gNsLyePuI4o3Gd7EF0V1GZnmToC9xhPj0RHJq8XsqinWb//z7lAQxpWOQFnhjP6S+pYs7Ow6MB+jxYyT8FJs9z5659Te6BljgxcBkxJThkI7LtMp9VahhanlXbelkfH6mw=
 install:
 - cd docker
 - make buildComplete createDockerImage
 - docker tag seresearch/opendlv-cfsd18-on-opendlv-core-on-opendavinci-on-base:latest ${IMAGE}:${COMMIT}
-#- docker build -f Dockerfile.amd64 -t ${IMAGE}:${COMMIT} .
-#- docker run -d --name test ${IMAGE}:${COMMIT} communication-test-receive --cid=112
 script: skip
-#- docker ps | grep -q test
 after_success:
 - docker --version
 - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
 - docker tag ${IMAGE}:${COMMIT} ${DOCKERHUB}/${IMAGE}:${COMMIT}
 - docker push ${DOCKERHUB}/${IMAGE}:${COMMIT}
-
 notifications:
   email:
     on_success: never
